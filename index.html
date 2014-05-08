@@ -16,12 +16,6 @@
 <body>
 	<div id="wrapper">
 		<div id="title"></div>
-		<ul class="nav">
-			<li>ARTICLES READ AND ARCHIVED</li>
-			<li>POWERED BY <a href="http://jlord.gitub.io/sheetsee.js" target="_blank">SHEETSEE.JS</a> AND <a href="http://www.ifttt.com" target="blank">IFTTT.COM</a> (AND <a href="http://www.getpocket.com/" target="_blank">POCKET</a>)</li>
-      <li><a class="dim" href="#info" target="_blank">INFO</a><span class="dim"> or</span></li>
-			<li><a class="dim" href="http://www.github.com/jlord/sheetsee-pocket#hi" target="_blank">SET UP YOUR ARCHIVE</a></li>
-		</ul>
 
 		<div id="filters" class="container">
 			<input id="articleSearch" type="text" placeholder="Cherchez.."></input>
@@ -32,13 +26,23 @@
 		<div id="articleTable"></div>
 
     <div id="info">
-      <h2>INFO</h2>
-      <p>This is an open source, easy to replicate project by <a href="http://www.twitter.com/jllord" target="_blank">@jllord</a>. If you use <a href="http://www.getpocket.com" target="_blank">Pocket</a> to save articles for later, you can also use <a href="http://www.ifttt.com" target="_blank">ifttt.com</a> (if this than that) to automate sending the article details to a Google Spreadsheet once you've archived it. Once you have a Google Spreadsheet you can use <a href="http://jlord.github.io/sheetsee.js" target="_blank">sheetsee.js</a> to turn into a website like so. So many possibilities! See the <a href="http://www.github.com/jlord/sheetsee-pocket#hi" target="_blank">documentation</a> to learn how to set up your own or contribute code!</p>
+      <h2>D'où vient cette sélection ?</h2>
+<p>Il existe sur Google+ <a href="https://plus.google.com/u/0/communities/116980293240150398389">une communauté de journalistes qui tâtent un peu des outils modernes</a>.</p>
+<p>Ou, expliqué plus correctement, des journalistes qui partagent des liens vers des outils qu'ils ont repérés ou testés,
+	ainsi que des bonnes pratiques, des tutoriels. Plein de bonnes choses, donc, pour qui veut améliorer sa pratique.</p>
+	<p> Après plusieurs mois, les liens se sont empilés, et il devenait difficile de retrouver nos petits. Cette page permet de s'y retrouver à peu près. Elle n'est pas optimale mais, elle fonctionne ^^</p>
     </div>
+
+		<ul class="nav">
+			<li>ARTICLES READ AND ARCHIVED</li>
+			<li>POWERED BY <a href="http://jlord.gitub.io/sheetsee.js" target="_blank">SHEETSEE.JS</a> AND <a href="http://www.ifttt.com" target="blank">IFTTT.COM</a> (AND <a href="http://www.getpocket.com/" target="_blank">POCKET</a>)</li>
+			<li><a class="dim" href="#info" target="_blank">INFO</a><span class="dim"> or</span></li>
+			<li><a class="dim" href="http://www.github.com/jlord/sheetsee-pocket#hi" target="_blank">SET UP YOUR ARCHIVE</a></li>
+		</ul>
 	</div><!-- end wrapper -->
 
 	<script id="title" type="text/html">
-		<h1><span class="highlighted">{{numArticles}}</span> outils repérés par la communauté.</h1>
+		<h1>Une sélection de <span class="highlighted">{{numArticles}}</span> outils et ressources repérées par la communauté</h1>
 	</script>
 
   <script id="tags" type="text/html">
@@ -49,7 +53,7 @@
 
 	<script id="articleTable" type="text/html">
 		<table>
-			<tr><th class="fancy">&#8470;</th><th class="date">Date</th><th class="">Article</th><th>Tags</th><th>Contributeur</th></tr>
+			<tr><th class="fancy">&#8470;</th><th class="date">Date</th><th class="">Nom et description de la ressource</th><th>Tags</th><th>Contributeur</th></tr>
 		  {{#rows}}
 		  	<tr class="{{rowNumber}}"><td class="light-type">{{rowNumber}}</td>
 				<td class="date">{{date}}</td>
